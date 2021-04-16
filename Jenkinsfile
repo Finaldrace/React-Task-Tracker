@@ -11,6 +11,7 @@ pipeline {
                 sh 'npm install' 
             }
         }
+<<<<<<< HEAD
         stage('Deploy'){
             if(env.BRANCH_NAME == 'master'){
                 sh 'docker build -t react-app --no-cache .'
@@ -19,5 +20,7 @@ pipeline {
                 sh 'docker rmi -f react-app localhost:5000/react-app'
             }
         }
+=======
+>>>>>>> master
     }
 }
